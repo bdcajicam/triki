@@ -1,6 +1,8 @@
 <html> 
 <body>
-<h3 id="info">Es el turno de X</h3>
+<div>
+<h3 style="display:inline-block;">Es el turno de <span id="info" style="color: red">X</span> </h3>
+<div>
 <table align="center">
   <tr>
     <td id="00"></td>
@@ -20,6 +22,7 @@
 </table>
 
 <script>
+var victory = [0,0];
 var tablero = new Object();
 tablero["00"] = "";
 tablero["01"] = "";
@@ -100,7 +103,8 @@ function changeX(id) {
     document.getElementById(id).style.backgroundImage = "url('/assets/x.png')";
     turn = turn +1;
     tablero[id] = "X";
-    document.getElementById("info").innerHTML = "Es el turno de O";
+    document.getElementById("info").innerHTML = "O";
+    document.getElementById("info").style.color = "blue";
     check();
 }
 
@@ -108,7 +112,8 @@ function changeO(id) {
     document.getElementById(id).style.backgroundImage = "url('/assets/o.png')";
     turn = turn -1;
     tablero[id] = "O";
-    document.getElementById("info").innerHTML = "Es el turno de X";
+    document.getElementById("info").innerHTML = "X";
+    document.getElementById("info").style.color = "red";
     check();
 }
 
