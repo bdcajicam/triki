@@ -22,7 +22,6 @@
 </table>
 
 <script>
-var victory = [0,0];
 var tablero = new Object();
 tablero["00"] = "";
 tablero["01"] = "";
@@ -121,42 +120,34 @@ function check(){
   if (tablero["00"] != "" && tablero["00"] == tablero["01"] && tablero["01"]==tablero["02"]){
     window.alert(tablero["00"] + " gana!!!");
     erase();
-    console.log(1);
   }
   if (tablero["10"] != "" && tablero["10"] == tablero["11"] && tablero["11"]==tablero["12"]){
     window.alert(tablero["10"] + " gana!!!");
     erase();
-    console.log(2);
   }
   if (tablero["20"] != "" && tablero["20"] == tablero["21"] && tablero["21"]==tablero["22"]){
     window.alert(tablero["20"] + " gana!!!");
     erase();
-    console.log(3);
   }
   if (tablero["00"] != "" && tablero["00"] == tablero["10"] && tablero["10"]==tablero["20"]){
     window.alert(tablero["00"] + " gana!!!");
     erase();
-    console.log(4);
   }
   if (tablero["01"] != "" && tablero["01"] == tablero["11"] && tablero["11"]==tablero["21"]){
     window.alert(tablero["01"] + " gana!!!");
     erase();
-    console.log(5);
   }
   if (tablero["02"] != "" && tablero["02"] == tablero["12"] && tablero["12"]==tablero["22"]){
     window.alert(tablero["02"] + " gana!!!");
     erase();
-    console.log(6);
   }
   if (tablero["00"] != "" && tablero["00"] == tablero["11"] && tablero["11"]==tablero["22"]){
     window.alert(tablero["00"] + " gana!!!");
     erase();
-    console.log(7);
   }
   if (tablero["02"] != "" && tablero["02"] == tablero["11"] && tablero["11"]==tablero["20"]){
     window.alert(tablero["02"] + " gana!!!");
     erase();
-    console.log(8);
   }
   else{
     tie();
@@ -184,6 +175,7 @@ function tie(){
   }
   if (empty == 0){
     window.alert("¡¡¡EMPATE!!!");
+    erase();
   }
 }
 </script>
