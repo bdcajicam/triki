@@ -1,8 +1,12 @@
 // Place all the styles related to the canvas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-image: url('/assets/wall.jpg');
+}
+
 table{
-    background-color: #f2f2f2;
+    #background-color: #f2f2f2;
     width: 600px;
     height: 600px;
     border: 5px solid black;
@@ -21,4 +25,9 @@ td {
     height: 200px;
     border: 5px solid black;
     border-collapse: collapse;
+}
+
+h2 {
+    margin-left: 80px;
+    font-family: "Times New Roman", Times, serif;
 }
