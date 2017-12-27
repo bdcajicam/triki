@@ -1,0 +1,2 @@
+class TableroController < ApplicationController
+end
