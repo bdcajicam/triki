@@ -3,9 +3,9 @@
 <h3 id="info">Es el turno de X</h3>
 <table align="center">
   <tr>
-    <td id="00"></th>
-    <th id="01"></th>
-    <th id="02"></th>
+    <td id="00"></td>
+    <td id="01"></td>
+    <td id="02"></td>
   </tr>
   <tr>
     <td id="10"></td>
@@ -33,65 +33,65 @@ tablero["22"] = "";
 var turn = 0;
 
 document.getElementById("00").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["00"] == ""){
       changeX("00");
-    }else{
+    }else if (turn == 1 && tablero["00"] == ""){
       changeO("00");
     }
   };
 document.getElementById("01").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["01"] == ""){
       changeX("01");
-    }else{
+    }else if (turn == 1 && tablero["01"] == ""){
       changeO("01");
     }
   };
 document.getElementById("02").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["02"] == ""){
       changeX("02");
-    }else{
+    }else if (turn == 1 && tablero["02"] == ""){
       changeO("02");
     }
   };
 document.getElementById("10").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["10"] == ""){
       changeX("10");
-    }else{
+    }else if (turn == 1 && tablero["10"] == ""){
       changeO("10");
     }
   };
 document.getElementById("11").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["11"] == ""){
       changeX("11");
-    }else{
+    }else if (turn == 1 && tablero["11"] == ""){
       changeO("11");
     }
   };
 document.getElementById("12").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["12"] == ""){
       changeX("12");
-    }else{
+    }else if (turn == 1 && tablero["12"] == ""){
       changeO("12");
     }
   };
 document.getElementById("20").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["20"] == ""){
       changeX("20");
-    }else{
+    }else if (turn == 1 && tablero["20"] == ""){
       changeO("20");
     }
   };
 document.getElementById("21").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["21"] == ""){
       changeX("21");
-    }else{
+    }else if (turn == 1 && tablero["21"] == ""){
       changeO("21");
     }
   };
 document.getElementById("22").onclick = function() {
-    if (turn == 0){
+    if (turn == 0 && tablero["22"] == ""){
       changeX("22");
-    }else{
+    }else if (turn == 1 && tablero["22"] == ""){
       changeO("22");
     }
   };
@@ -153,6 +153,9 @@ function check(){
     erase();
     console.log(8);
   }
+  else{
+    tie();
+  }
 }
 
 function erase(){
@@ -162,6 +165,20 @@ function erase(){
         document.getElementById(c).style.backgroundImage = "none";
 	turno = 0;
     }
+  }
+}
+
+function tie(){
+  var empty = 0;
+  for (var c in tablero) {
+    if (tablero.hasOwnProperty(c)) {
+        if (tablero[c] == ""){
+	  empty = empty +1;	
+	}
+    }
+  }
+  if (empty == 0){
+    window.alert("¡¡¡EMPATE!!!");
   }
 }
 </script>
